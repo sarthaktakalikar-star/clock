@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Global time</p>
+          <h1>World Clock</h1>
+        </div>
+        <div class="toolbar">
+          <button id="add-local-timezone" class="secondary">Add My Timezone</button>
+          <button id="clear-all" class="danger">Clear</button>
+        </div>
+      </header>
+
+      <section class="search-panel">
+        <label class="sr-only" for="timezone-search">Search timezone</label>
+        <input
+          id="timezone-search"
+          type="text"
+          autocomplete="off"
+          placeholder="Search city or timezone (e.g. Tokyo, London)"
+        />
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </section>
+
+      <main>
+        <section id="clocks" class="clock-grid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
